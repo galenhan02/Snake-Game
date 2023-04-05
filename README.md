@@ -1,2 +1,2 @@
 # Snake-Game
-A simplified snake game to run in the terminal!
+A modified snake game to run in the terminal!
