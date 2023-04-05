@@ -4,7 +4,6 @@ public class Game {
     int width;
     int height;
     int points;
-    Snake snake;
     Coordinate[][] board;
     
 
