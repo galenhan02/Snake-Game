@@ -129,7 +129,7 @@ public class Game {
         Random random = new Random();
         String input = "";
 
-        System.out.println("Please specify the following dimensions: [width] [height] (Example: 10 10)");
+        System.out.println("Use WASD for movement, q for quitting the game.\nPlease specify the following dimensions: [width] [height] (Example: 10 10)");
         String[] dimens; 
         while(true) {
             input = in.nextLine();
