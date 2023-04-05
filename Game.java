@@ -124,6 +124,7 @@ public class Game {
     
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        Random random = new Random();
         String input = "";
 
         System.out.println("Please specify the following dimensions: [width] [height] (Example: 10 10)");
@@ -139,11 +140,9 @@ public class Game {
         }
         
         Game game = new Game(Integer.parseInt(dimens[0]), Integer.parseInt(dimens[1]), 0);
-        Snake snake = game.new Snake(game.board[4][4]);
+        Snake snake = game.new Snake(game.board[random.nextInt(game.height)][random.nextInt(game.width)]);
         game.generateApple();
         game.render();
-
-        
 
         while(true) {
             input = in.next();
@@ -166,7 +165,7 @@ public class Game {
                     position = game.board[(snake.head.x - 1 + game.height) % game.height][snake.head.y];
                     break;
                 default:
-                    position = game.board[snake.head.x][snake.head.y]; //don't move
+                    position = game.board[snake.head.x][snake.head.y];
             }
             if(position.space == Space.APPLE) {
                 snake.grow(position);
